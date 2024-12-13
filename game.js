@@ -28,8 +28,21 @@ function gameOver(){
         is_game_running = false;
     }
 }
+function start_timer(){
+    let starting_timer = setInterval(function(){
+    if(timer_left > 0){
+        timer_left -= 1;
+        display_timer.innerHTML = "Timer left: " + timer_left + "s";
+    }
+    if(!is_game_running){
+        clearInterval(starting_timer);
+        endGame();
+}
+}, 1000);
+}
 
 function startGame() {
+    start_timer();
     displayScore("");
     is_game_running = true;
     for(let i = 0; i < boundaries.length; i++)
