@@ -1,12 +1,15 @@
 //Initialized variables
 let is_game_running = false; 
 let score = 0;
+let timer_left = 10;
 
 //Declared variables
 let end;
 let start;
 let boundaries;
 let status_display; 
+let display_timer;
+let going_timer_down;
 
 document.addEventListener("DOMContentLoaded", loadPage);
 
@@ -26,7 +29,7 @@ function gameOver(){
     }
 }
 
-function startGame(){
+function startGame() {
     displayScore("");
     is_game_running = true;
     for(let i = 0; i < boundaries.length; i++)
@@ -46,6 +49,7 @@ function endGame(){
 function loadPage(){
     end = document.getElementById("end");
     start = document.getElementById("start");
+    display_timer = document.getElementById("game_timer");
     boundaries = document.getElementsByClassName("boundary");
     status_display =  document.getElementById("status");
 
@@ -55,5 +59,4 @@ function loadPage(){
         boundaries[i].addEventListener("mouseover", gameOver);
     }
 }
-
 
