@@ -43,6 +43,22 @@ p {
 	right: 0;
 }
 
+div.coin1 {
+	position: absolute;
+	background-color: red;
+	top: 50px;
+	left: 50px;
+	height: 30px;
+	width: 30px;
+	border: 1px solid black;
+	padding: 5px;
+	cursor: default;
+	
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 25pt;
+	text-align: center;
+}
+
 div.boundary {
 	background-color: #eeeeee;
 	border: 1px solid black;
